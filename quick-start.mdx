@@ -1,0 +1,103 @@
+---
+title: Quick Start
+description: Get up and running with 昊 周 Documentation in minutes
+---
+
+## Welcome to 昊 周
+
+Getting started with 昊 周 Documentation is straightforward. Whether you're a solo developer or part of a large team, our platform helps you create professional documentation quickly. This guide will walk you through your first documentation project.
+
+<Steps>
+  <Step title="Create Account" icon="user">
+    Visit our website and sign up for a free account. Choose between personal and team plans.
+
+    <Callout kind="info">Free accounts include up to 5 projects and basic collaboration features.</Callout>
+  </Step>
+  <Step title="Set Up Project" icon="folder">
+    Click "New Project" and give it a name. Select a template or start from scratch.
+
+    <CodeGroup tabs="Web UI,API">
+      ```bash
+# Using our CLI tool
+npx haozhou init my-project
+```
+      ```javascript
+// Using the API
+const project = await api.createProject({
+  name: 'My Documentation',
+  template: 'basic'
+});
+```
+    </CodeGroup>
+  </Step>
+  <Step title="Write Documentation" icon="edit">
+    Use our rich text editor to create your first page. Add headings, code blocks, and images.
+  </Step>
+  <Step title="Publish" icon="upload">
+    Click "Publish" to make your documentation live. Share the URL with your team or users.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Web Interface" icon="monitor">
+    Our web interface provides a familiar editing experience. Drag and drop images, use keyboard shortcuts, and preview changes in real-time.
+
+    <Expandable title="Keyboard Shortcuts" default-open="false">
+      | Shortcut | Action |
+      |----------|--------|
+      | `Ctrl+S` | Save changes |
+      | `Ctrl+B` | Bold text |
+      | `Ctrl+I` | Italic text |
+    </Expandable>
+  </Tab>
+  <Tab title="CLI Tool" icon="terminal">
+    For developers who prefer command-line workflows, our CLI tool integrates with your existing toolchain.
+
+    ```bash
+# Install CLI
+global add @haozhou/cli
+
+# Initialize project
+haozhou init my-docs
+
+# Add pages
+haozhou add page introduction.mdx
+
+# Publish
+haozhou publish
+```
+  </Tab>
+  <Tab title="API Integration" icon="code">
+    Use our REST API to automate documentation creation and updates from your applications.
+
+    ```javascript
+const client = new HaoZhouClient({
+  apiKey: process.env.HAOZHOU_API_KEY
+});
+
+const doc = await client.createDocument({
+  title: 'API Reference',
+  content: '# API Endpoints\n...',
+  projectId: 'my-project'
+});
+```
+  </Tab>
+</Tabs>
+
+<Callout kind="success">Congratulations! Your documentation is now live and ready to share.</Callout>
+
+## Next Steps
+
+Now that you have your first project set up, explore advanced features like team collaboration, custom domains, and integrations.
+
+<ExpandableGroup>
+  <Expandable title="Team Collaboration" default-open="true">
+    Invite team members to collaborate on documentation. Set up review workflows and track changes.
+  </Expandable>
+  <Expandable title="Integrations" default-open="false">
+    Connect 昊 周 with GitHub, Slack, and other tools to automate your documentation workflow.
+  </Expandable>
+  <Expandable title="Custom Branding" default-open="false">
+    Customize the look and feel of your documentation with your brand colors and logo.
+  </Expandable>
+</ExpandableGroup>

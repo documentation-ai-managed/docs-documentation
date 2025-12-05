@@ -1,0 +1,111 @@
+---
+title: Managing Documentation
+description: Best practices for organizing and maintaining your documentation projects
+---
+
+## Documentation Structure
+
+Effective documentation requires thoughtful organization. 昊 周 Documentation provides flexible tools to structure your content for maximum clarity and usability. Whether you're documenting APIs, products, or internal processes, a well-organized structure helps users find information quickly.
+
+<Columns cols={2}>
+  <Card title="Project Organization" icon="folder" href="#project-structure">
+    Learn how to structure your documentation projects effectively.
+  </Card>
+  <Card title="Content Guidelines" icon="file-text" href="#content-best-practices">
+    Follow best practices for writing clear, actionable documentation.
+  </Card>
+</Columns>
+
+## Project Structure
+
+A good documentation structure starts with clear categories and logical navigation. Use folders and sections to group related content together.
+
+<Tabs>
+  <Tab title="API Documentation" icon="code">
+    Organize API docs by endpoint type and version.
+
+    | Section | Content |
+    |---------|---------|
+    | Authentication | Login and token management |
+    | Core Endpoints | Main API functionality |
+    | Webhooks | Event notifications |
+  </Tab>
+  <Tab title="Product Guides" icon="book">
+    Structure product documentation by user journey.
+
+    | Section | Content |
+    |---------|---------|
+    | Getting Started | Onboarding and setup |
+    | User Guide | Daily usage instructions |
+    | Troubleshooting | Common issues and solutions |
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Plan Your Structure" icon="target">
+    Identify your audience and their information needs. Create a sitemap or outline before writing.
+  </Step>
+  <Step title="Create Categories" icon="folder">
+    Use folders and sections to group related topics. Keep navigation levels to 3 or fewer.
+  </Step>
+  <Step title="Write Content" icon="edit">
+    Follow consistent formatting and style guidelines across all pages.
+  </Step>
+  <Step title="Review and Update" icon="refresh-cw">
+    Regularly review content for accuracy and relevance. Update as your product evolves.
+  </Step>
+</Steps>
+
+<Callout kind="tip">Use consistent terminology throughout your documentation to avoid confusion.</Callout>
+
+## Content Best Practices
+
+Writing effective documentation requires attention to clarity, accuracy, and user experience. Focus on actionable information that helps users achieve their goals.
+
+<Expandable title="Writing Guidelines" default-open="true">
+  - Use active voice and present tense
+  - Write for your audience's skill level
+  - Include practical examples and code snippets
+  - Keep sentences and paragraphs concise
+  - Use headings and lists for scannability
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Version Control" default-open="false">
+    Use version control to track changes and maintain documentation history. Tag releases and maintain version-specific docs.
+  </Expandable>
+  <Expandable title="Search Optimization" default-open="false">
+    Write descriptive titles and headings. Include keywords users might search for.
+  </Expandable>
+  <Expandable title="Accessibility" default-open="false">
+    Ensure your documentation is accessible to users with disabilities. Use alt text for images and proper heading structure.
+  </Expandable>
+</ExpandableGroup>
+
+<CodeGroup tabs="Markdown,HTML">
+  ```markdown
+# Clear Documentation Structure
+
+## Introduction
+Brief overview of the topic.
+
+## Getting Started
+Step-by-step setup instructions.
+
+## API Reference
+Detailed endpoint documentation.
+```
+  ```html
+<div class="documentation">
+  <h1>Clear Documentation Structure</h1>
+  <section>
+    <h2>Introduction</h2>
+    <p>Brief overview of the topic.</p>
+  </section>
+  <section>
+    <h2>Getting Started</h2>
+    <p>Step-by-step setup instructions.</p>
+  </section>
+</div>
+```
+</CodeGroup>

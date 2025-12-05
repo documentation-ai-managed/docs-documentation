@@ -1,0 +1,131 @@
+---
+title: Integrations
+description: Connect 昊 周 Documentation with your favorite tools and platforms
+---
+
+## Integration Overview
+
+昊 周 Documentation integrates seamlessly with popular development and collaboration tools. Automate your documentation workflow by connecting with GitHub, Slack, and other platforms. These integrations help keep your docs synchronized with your code and notify your team of changes.
+
+<Columns cols={3}>
+  <Card title="GitHub" icon="github" href="#github-integration">
+    Sync documentation with your repository.
+  </Card>
+  <Card title="Slack" icon="message-circle" href="#slack-integration">
+    Get notifications for documentation updates.
+  </Card>
+  <Card title="CI/CD" icon="settings" href="#ci-cd-integration">
+    Automate documentation publishing.
+  </Card>
+</Columns>
+
+## GitHub Integration
+
+Connect your GitHub repository to automatically sync documentation changes. Pull request reviews can include documentation updates, and merges trigger automatic publishing.
+
+<Steps>
+  <Step title="Install GitHub App" icon="download">
+    Visit our GitHub app page and click "Install".
+  </Step>
+  <Step title="Authorize Repository" icon="key">
+    Grant access to the repositories you want to connect.
+  </Step>
+  <Step title="Configure Sync" icon="settings">
+    Set up automatic syncing for specific branches and file paths.
+  </Step>
+  <Step title="Test Integration" icon="check-circle">
+    Make a change to your docs and verify it syncs correctly.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Pull Request Integration" icon="git-branch">
+    Documentation changes in pull requests are automatically reviewed and can be previewed.
+
+    ```javascript
+// .github/workflows/docs.yml
+github-actions:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+  jobs:
+    sync-docs:
+      uses: haozhou/sync@v1
+```
+  </Tab>
+  <Tab title="Webhook Integration" icon="webhook">
+    Receive webhooks for documentation events like publishes and updates.
+
+    ```json
+{
+  "event": "document.published",
+  "project": "my-project",
+  "url": "https://docs.example.com/my-project"
+}
+```
+  </Tab>
+</Tabs>
+
+<Callout kind="info">GitHub integration requires repository admin access to install the app.</Callout>
+
+## Slack Integration
+
+Stay informed about documentation changes with Slack notifications. Get real-time updates when team members publish, update, or comment on documentation.
+
+<Expandable title="Setting Up Slack Integration" default-open="true">
+  1. Go to your project settings
+  2. Click "Integrations" tab
+  3. Find Slack and click "Connect"
+  4. Authorize the app in Slack
+  5. Choose notification preferences
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Notification Types" default-open="false">
+    | Event | Description |
+    |-------|-------------|
+    | Document Published | When a page goes live |
+    | Comment Added | When someone comments |
+    | Project Updated | Major project changes |
+  </Expandable>
+  <Expandable title="Custom Channels" default-open="false">
+    Configure different Slack channels for different types of notifications, such as development updates versus product announcements.
+  </Expandable>
+</ExpandableGroup>
+
+## CI/CD Integration
+
+Automate documentation publishing as part of your deployment pipeline. Use our CLI or API to publish docs when you release new versions.
+
+<CodeGroup tabs="GitHub Actions,Jenkins">
+  ```yaml
+# .github/workflows/deploy.yml
+name: Deploy and Publish Docs
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish Documentation
+        run: npx haozhou publish --project my-project
+```
+  ```groovy
+// Jenkins pipeline
+pipeline {
+    agent any
+    stages {
+        stage('Deploy') {
+            steps {
+                sh 'haozhou publish --project my-project'
+            }
+        }
+    }
+}
+```
+</CodeGroup>
+
+<Callout kind="success">Integrations help maintain documentation accuracy and keep your team informed of changes.</Callout>

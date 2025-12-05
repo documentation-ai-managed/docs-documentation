@@ -1,0 +1,135 @@
+---
+title: Best Practices
+description: Proven strategies for creating effective documentation with 昊 周
+---
+
+## Documentation Excellence
+
+Creating documentation that users actually read and find helpful requires strategy and consistency. 昊 周 Documentation provides the tools, but following best practices ensures your docs deliver real value. Focus on clarity, accuracy, and user experience.
+
+<Tabs>
+  <Tab title="Writing Tips" icon="edit">
+    Write clear, concise content that focuses on user goals.
+
+    <Expandable title="Essential Writing Principles" default-open="true">
+      - Use active voice and present tense
+      - Write for your specific audience
+      - Include practical examples
+      - Keep content scannable with headings and lists
+      - Test content with real users
+    </Expandable>
+  </Tab>
+  <Tab title="Organization" icon="folder">
+    Structure content logically for easy navigation.
+
+    | Principle | Reason |
+    |-----------|--------|
+    | Logical Flow | Follow user journey |
+    | Consistent Naming | Use familiar terms |
+    | Limited Depth | Keep hierarchy shallow |
+    | Cross-references | Link related content |
+  </Tab>
+  <Tab title="Maintenance" icon="refresh-cw">
+    Keep documentation current and accurate.
+
+    <Steps>
+      <Step title="Regular Reviews" icon="eye">Schedule quarterly reviews of all documentation.</Step>
+      <Step title="Version Updates" icon="tag">Update docs when features change.</Step>
+      <Step title="User Feedback" icon="message-circle">Incorporate feedback from users and team.</Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Columns cols={2}>
+  <Card title="User Research" icon="users" href="#user-research">
+    Understand your audience's needs and pain points.
+  </Card>
+  <Card title="Content Strategy" icon="target" href="#content-strategy">
+    Plan your documentation approach systematically.
+  </Card>
+</Columns>
+
+## User Research
+
+Effective documentation starts with understanding your users. Conduct research to identify what information they need and how they prefer to consume it.
+
+<Steps>
+  <Step title="Identify Audience" icon="user">
+    Define who uses your documentation: developers, end users, administrators?
+  </Step>
+  <Step title="Gather Feedback" icon="message-square">
+    Use surveys, interviews, and analytics to understand user needs.
+  </Step>
+  <Step title="Analyze Usage" icon="bar-chart">
+    Review which pages are most visited and where users get stuck.
+  </Step>
+  <Step title="Iterate Content" icon="refresh-cw">
+    Update documentation based on insights and feedback.
+  </Step>
+</Steps>
+
+<Callout kind="tip">Regular user research ensures your documentation evolves with your users' needs.</Callout>
+
+## Content Strategy
+
+A content strategy provides direction for your documentation efforts. Define goals, processes, and metrics to measure success.
+
+<ExpandableGroup>
+  <Expandable title="Content Goals" default-open="true">
+    Set clear objectives for your documentation, such as reducing support tickets or improving user adoption.
+  </Expandable>
+  <Expandable title="Publishing Workflow" default-open="false">
+    Establish processes for creating, reviewing, and publishing documentation. Include style guides and templates.
+  </Expandable>
+  <Expandable title="Success Metrics" default-open="false">
+    Track metrics like page views, search usage, and user feedback to measure documentation effectiveness.
+  </Expandable>
+</ExpandableGroup>
+
+<CodeGroup tabs="Style Guide,Template">
+  ```markdown
+# Documentation Style Guide
+
+## Voice and Tone
+- Use friendly, professional tone
+- Write in active voice
+- Be concise and direct
+
+## Formatting
+- Use H2 for main sections
+- Include code examples
+- Add callouts for important notes
+```
+  ```markdown
+# Template: API Endpoint Documentation
+
+## Overview
+Brief description of what this endpoint does.
+
+## Request
+### Method
+`POST`
+
+### URL
+`/api/v1/users`
+
+### Body
+```json
+{
+  "name": "string",
+  "email": "string"
+}
+```
+
+## Response
+### Success (200)
+```json
+{
+  "id": "string",
+  "created": true
+}
+```
+```
+</CodeGroup>
+
+<Callout kind="success">Following best practices leads to documentation that users love and rely on.</Callout>
